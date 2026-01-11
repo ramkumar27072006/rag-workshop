@@ -1,0 +1,21 @@
+RAG PACKAGES :
+
+1) Langchain ( Framework )
+2) Langchain -groq ( groq-llm)
+3) pypdf ( scans pdf (extracts text)
+4) Langchain text-splitter
+5) Sentence-transformer (converts text to embeddings[numbers] )
+   https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+6) Chromadb ( vector database )
+
+* Source data -> Embedding service -> vector data -> vector database *
+
+* groq: *
+import os
+import openai
+
+client = openai.OpenAI(
+  base_url="https://api.groq.com/openai/v1",
+  api_key=os.environ.get("GROQ_API_KEY")
+)
+
